@@ -17,7 +17,7 @@ export const projects = [
     },
     {
         title: "Dreamcatcher by Hila",
-        description: "Online shop for selling dreamcatchers and other hand-made art for the instagram brand 'dreamcatcher_by_hila'.\n",
+        description: "Online shop for selling dreamcatchers and hand-made art for the instagram brand 'dreamcatcher_by_hila'.\n",
         image: dreamcatcher,
         tags: ["React.JS", "Redux", "Firebase"],
         code: "https://github.com/sagiK11/Dreamcatcher-React-App",
@@ -27,7 +27,7 @@ export const projects = [
     },
     {
         title: "Fitness Badge",
-        description: "An app to calculate and keep track of student's result digitally at their physical exams substituting pen and paper.\n",
+        description: "An app to calculate and keep track of student's results digitally at their physical exams substituting pen and paper.\n",
         image: fitness_badge,
         tags: ["Android", "Java", "Firebase"],
         code: "https://github.com/sagiK11/Fitness-Badge-Android",
@@ -35,9 +35,9 @@ export const projects = [
         time: "2018",
         id: 2
     },
-    {
+    { // with the intention of helping students manage their university's assignments
         title: "Academic Office",
-        description: "A Desktop app with the intention of helping students manage their university's assignments.\n",
+        description: "An eco system for students to manage their univeristy's tests and assignemnts as well as sharing ideas with each other.\n",
         image: academic_office,
         tags: ["Java", "JavaFx", "Postgre/SQL"],
         code: "https://github.com/sagiK11/Academic-Office-JavaFX-App",
@@ -47,7 +47,7 @@ export const projects = [
     },
     {
         title: "Assembler",
-        description: "Compiler for assembly language, namely it generates machine code out of assembly langauge.\n",
+        description: "Command line app that takes as input assembly language text files and outputs machine code files (object files).\n",
         image: assembler,
         tags: ["C", "Linux"],
         code: "https://github.com/sagiK11/Assembly-Compiler-Course-Project",
