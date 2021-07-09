@@ -87,10 +87,10 @@
 .box{
     border-radius: 1.5rem;
 }
-.test{
-    background-color: black;
-    color: red
+.box-content{
+    margin-bottom: 2rem;
 }
+
 .project-box{
     transform-style: preserve-3d;
 }

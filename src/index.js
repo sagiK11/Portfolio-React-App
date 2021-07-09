@@ -24,29 +24,35 @@ burgerIcon.addEventListener('click', () => {
 })
 
 //Project Cards
-const projectBox = Array.from(document.getElementsByClassName("project-box"))
-console.log(projectBox)
+const projectBoxs = Array.from(document.getElementsByClassName("project-box"))
 
-projectBox.map((project) => {
+//Hover Effect
+projectBoxs.map((project) => {
+  const content = project.querySelector('.box-content')
+  const logo = project.querySelector('.logo')
+  const text = project.querySelector('.box-description')
+  const links = project.querySelector('.columns')
 
-  project.addEventListener('mousemove', (e) => {
-    const logo = project.querySelector('.logo')
-    const text = project.querySelector('.box-description')
+  const addAnimation = (e) => {
     let ax = (window.innerWidth / 2 - e.pageX) / 20;
 
     project.style.transform = "rotateZ(" + ax / 3 + "deg) rotateY(" + ax + "deg)";
     logo.style.transform = "translateZ(" + 100 + "px) translateY(" + -10 + "px)"
     text.style.transform = "translateZ(" + 100 + "px)"
-  })
+  }
 
-  project.addEventListener('mouseleave', () => {
-    const logo = project.querySelector('.logo')
-    const text = project.querySelector('.box-description')
+  const resetAnimation = () => {
     project.style.transform = "none";
     logo.style.transform = "none";
     text.style.transform = "none";
-  })
+  }
+
+  project.addEventListener('mouseleave', resetAnimation)
+  content.addEventListener('mousemove', addAnimation)
+  links.addEventListener('mousemove', resetAnimation)
 
 })
+
+
 
 
