@@ -17,9 +17,9 @@ export default Home
 
 const Section1 = () => {
     return (
-        <section className="section s1 is-white has-text-centered">
+        <section className="section section-1 is-white has-text-centered">
             <div className="container">
-                <div className="column is-centerd ">
+                <div className="column is-centerd">
                     <h1 className="title" style={{ letterSpacing: "0.1rem" }}>Software Developer</h1>
                     <h2 className="subtitle is-5 mt-4"><q className="quote">If you know how to make software, then you can create big things.</q></h2>
                     <figcaption className="subtitle is-5" >&mdash; Xavier Niel</figcaption>
@@ -32,7 +32,7 @@ const Section1 = () => {
 
 const Section2 = () => {
     return (
-        <section className="section s2 has-text-centered">
+        <section className="section section-2 has-text-centered">
             <div className="container">
                 <div className="columns is-centered">
                     <div className="column is-three-fifths">
@@ -54,11 +54,10 @@ const Section2 = () => {
 }
 
 const Section3 = () => {
-
     return (
-        <section className="section s3">
+        <section className="section section-3">
             <div className="container">
-                <h1 className="title has-text-centered is-spaced is-size-3-dekstop is-size-4-mobile stack-title">My (Current) Tech Stack</h1>
+                <h1 className="title has-text-centered is-size-3-dekstop is-size-4-mobile stack-title">My (Current) Tech Stack</h1>
                 <div className="columns stack">
                     <div className="column tech-col-left">
                         <h2 className="subtitle tech-subtitle">Languages</h2>
@@ -117,29 +116,30 @@ const Section3 = () => {
 }
 const Section4 = () => {
     return (
-        <section className="section s4">
+        <section className="section section-4">
             <div className="container">
                 <h1 className="title has-text-centered my-5 my-work-title">My Work</h1>
                 <div className="columns is-multiline">
                     {
                         projects.map(({ title, description, image, tags, id, code, visit, time }) => (
                             <div className="column is-one-third project-box" key={id}>
-                                <a href={visit} className=" project-box">
-                                    <div className="box has-text-centered " >
-                                        <div className="box-content">
+                                <div className="box has-text-centered " >
+
+                                    <div className="box-content">
+                                        <a href={visit} style={{ color: "black" }} >
                                             <img className="logo" src={image} alt="project-logo" />
                                             <p className="content box-description">{description}</p>
+                                        </a>
+                                    </div>
+                                    <div className="columns">
+                                        <div className="column is-half">
+                                            <a className="box-ref" href={code}>Code</a>
                                         </div>
-                                        <div className="columns">
-                                            <div className="column is-half">
-                                                <a className="box-ref" href={code}>Code</a>
-                                            </div>
-                                            <div className="column is-half">
-                                                <a className="box-ref" href={visit}>Visit</a>
-                                            </div>
+                                        <div className="column is-half">
+                                            <a className="box-ref" href={visit}>Visit</a>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             </div>
                         ))
                     }
@@ -155,13 +155,18 @@ const Footer = () => {
         <div className="columns app-footer">
             <div className="column has-text-centered">
                 <h1 className="title footer-title">Sagi Korzack</h1>
+
                 <div className="footer-content">
-                    <h5>Created by me @2021</h5>
+                    <h5>Created by me
+                        <span class="icon-text">
+                            <span class="icon" style={{ verticalAlign: "bottom" }} >
+                                <i class="fas fa-copyright"></i>
+                            </span>
+                            <span>2021</span>
+                        </span> </h5>
                     <p> Made with React.JS & Bulma</p>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
-
-

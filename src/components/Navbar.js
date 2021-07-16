@@ -2,7 +2,7 @@ import logo from "../../src/assets/images/page_logo.svg"
 
 const Navbar = () => {
     return (
-        <nav className="navbar  py-0" role="navigation" aria-label="main navigation">
+        <nav className="navbar py-0" role="navigation" aria-label="main navigation">
             <div className="container">
                 <Brand />
                 <Menu />
@@ -44,8 +44,6 @@ const Menu = () => {
                     Linkedin
                 </a>
             </div>
-
         </div>
     )
-
 }

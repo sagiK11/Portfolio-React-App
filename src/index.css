@@ -1,35 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Revalia&family=Ruge+Boogie&display=swap');
 :root{
-    --blue_1: #5680E9;
-    --blue_2: #84CEEB;
-    --blue_3: #5AB9EA;
     --gray_1: #C1C8E4;
     --purple_1: #8860D0;
-    --prev_white2: #FAFAFA;
-    --prev_white3: #F5F6FB;
-    --prev_white4: #d6daec;
-    --prev_green1: #45737f;
-}
-.navbar{
-    background-color: var(--prev_white3);
-}
-.s1{
-    background-color: var(--prev_white3);
-}
-.s2{
-    background-color: var(--prev_white3);
-}
-.s3{
-    background-color: var(--purple_1);
-}
-.s4{
-    background-color: var(--prev_white3);
+    --white1: #FAFAFA;
+    --white2: #F5F6FB;
+    --green1: #45737f;
 }
 
-.app-footer{
-    background-color: var(--purple_1);
+/*========Navbar========*/
+.navbar{
+    background-color: var(--white2);
 }
+
 
 .navbar-item{
     color:var(--purple_1);
@@ -38,21 +21,43 @@
     font-family: 'Merienda One', cursive;
     letter-spacing: 0.1rem;
 }
+/*========Section 1========*/
 
+.section-1{
+    background-color: var(--white2);
+}
 .quote{
     font-family: 'Revalia', cursive;
     font-family: 'Ruge Boogie', cursive;
     font-family: 'Merienda One', cursive;
 }
+/*========Section 2========*/
 
-.stack-title{
-    color: var(--prev_white2);
-    letter-spacing: 0.1rem;
+.section-2{
+    background-color: var(--white2);
 }
 
-.my-work-title{
-    color: black;
-    letter-spacing: 0.2rem;
+
+/*========Section 3========*/
+.section-3{
+    background-color: var(--purple_1);
+}
+.section-3 .columns {
+    padding: 1rem;
+}
+.section-3 .column{
+    text-align: center;
+}
+.section-3 ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stack-title{
+    color: var(--white1);
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
 }
 
 .tech-col-left{
@@ -79,9 +84,19 @@
 }
 
 .tech-subtitle{
-    color: var(--prev_green1);
+    color: var(--green1);
     font-weight: 600;
     letter-spacing: 0.1rem;
+}
+
+/*========Section 4========*/
+.section-4{
+    background-color: var(--white2);
+}
+
+.my-work-title{
+    color: black;
+    letter-spacing: 0.2rem;
 }
 
 .box{
@@ -99,7 +114,6 @@
     font-family: 'Varela Round', sans-serif;
     letter-spacing: 0.04rem;
     text-shadow: 1px 1px 2px var(--gray_1);
-    
 }
 
 .logo{
@@ -117,6 +131,30 @@
     justify-content: center;
 }
 
+/*========Footer========*/
+.app-footer{
+    background-color: var(--purple_1);
+}
+
+.footer-title{
+    color: white;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    font-family: 'Old Standard TT', serif;
+    font-family: 'Varela Round', sans-serif;
+    text-shadow: 1px 1px 1px black;
+    padding-top: 1rem;
+}
+
+.footer-content{
+    color: var(--white1);
+    padding-top: 0.1rem;
+    padding-bottom: 1rem;
+    font-family: 'Old Standard TT', serif;
+    font-family: 'Varela Round', sans-serif;
+    letter-spacing: 0.05rem;
+    text-shadow: 0.5px 0.5px black;
+}
 
 @media screen and (min-width: 720px){
     .avatar{
@@ -142,24 +180,4 @@
         border-bottom-right-radius: 1rem;
         border-top-right-radius: 0rem;
     }
-}
-
-.footer-title{
-    color: white; 
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
-    font-family: 'Old Standard TT', serif;
-    font-family: 'Varela Round', sans-serif;
-    text-shadow: 1px 1px 1px black;
-    padding-top: 1rem;
-}
-
-.footer-content{
-    color: var(--prev_white2);
-    padding-top: 0.1rem;
-    padding-bottom: 1rem;
-    font-family: 'Old Standard TT', serif;
-    font-family: 'Varela Round', sans-serif;
-    letter-spacing: 0.05rem;
-    text-shadow: 0.5px 0.5px black;
 }
