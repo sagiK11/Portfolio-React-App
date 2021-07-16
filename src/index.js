@@ -35,10 +35,25 @@ projectBoxs.map((project) => {
 
   const addAnimation = (e) => {
     let ax = (window.innerWidth / 2 - e.pageX) / 20;
+    let rax = ax / 3
 
-    project.style.transform = "rotateZ(" + ax / 3 + "deg) rotateY(" + ax + "deg)";
-    logo.style.transform = "translateZ(" + 100 + "px) translateY(" + -10 + "px)"
-    text.style.transform = "translateZ(" + 100 + "px)"
+    project.style.cssText = `
+      -webkit-transform: rotateZ(` + rax + `deg) rotateY(` + ax + `deg);
+      -moz-transform: rotateZ(`+ rax + `deg) rotateY(` + ax + `deg); 
+      -ms-transform: rotateZ(`+ rax + `deg) rotateY(` + ax + `deg); 
+        transform: rotateZ(`+ rax + `deg) rotateY(` + ax + `deg);  `;
+    logo.style.cssText = ` 
+    -webkit-transform: translateZ(`+ 110 + `px) translateY(` + -10 + `px);
+    -moz-transform: translateZ(`+ 110 + `px) translateY(` + -10 + `px);
+     -ms-transform: translateZ(`+ 110 + `px) translateY(` + -10 + `px);   
+        transform: translateZ(`+ 110 + `px) translateY(` + -10 + `px); 
+        `;
+    text.style.cssText = `
+     -webkit-transform: translateZ(` + 100 + `px);
+     -moz-transform: translateZ(` + 100 + `px);
+     -ms-transform: translateZ(`+ 100 + `px);
+       transform: translateZ(` + 100 + `px);
+    `;
   }
 
   const resetAnimation = () => {
